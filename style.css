@@ -1,0 +1,145 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-highlight: #05DF05;
+    --color-error: #FF4F4F;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-content {
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    height: 95%; /* Ajustar para pantallas completas */
+    overflow: hidden;
+}
+
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    font-family: "Merriweather", serif;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input-wrapper {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-name, .input-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-text);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.input-textarea {
+    height: 100px;
+    resize: none;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.name-list {
+    list-style-type: none;
+    padding: 10px 0;
+    max-height: 200px; /* Altura fija */
+    overflow-y: scroll; /* Barra de desplazamiento vertical */
+    border: 1px solid var(--color-text);
+    margin-bottom: 15px;
+}
+
+.name-list li {
+    padding: 5px 0;
+}
+
+.result-list {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-highlight);
+    margin-top: 15px;
+}
+
+.button-container button {
+    margin: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-highlight);
+    border-radius: 50%;
+    animation: confetti-fall 2s ease-out infinite;
+}
+
+@keyframes confetti-fall {
+    0% { transform: translate(-50px, -50px); opacity: 1; }
+    100% { transform: translate(500px, 100vh); opacity: 0; }
+}
+
+/* Estilo para el footer */
+footer {
+    position: fixed; /* Fijar el footer en la pantalla */
+    bottom: 0; /* Ubicarlo al final del viewport */
+    width: 100%; /* Ocupa todo el ancho del cuerpo */
+    text-align: center;
+    font-size: 14px;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    padding: 10px 0;
+    border-top: 1px solid var(--color-text);
+}
+
